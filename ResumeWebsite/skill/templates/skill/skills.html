@@ -1,0 +1,109 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}skills{% endblock title %}
+{% block style %}<link rel="stylesheet" href="{% static 'skill/css/skill.css' %}">{% endblock style %}
+
+{% block content %}
+{% include 'core/pageTitle.html' with pageName='skills' %}
+
+<div class="row mx-5 mb-5">
+
+     <!-- column 1 -->
+    <div class="col-sm-5">
+
+        <div class="container mt-4 ">
+            <h3>HTML/CSS</h3>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                    100%
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 pt-3">
+            <h3>JavaScript</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                    50%
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 pt-3">
+            <h3>BootStrap</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                    70%
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5 pt-3">
+            <h3>SQL</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                    75%
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- column 2 -->
+    <div class="col-sm-2"></div>
+
+     <!-- column 3 -->
+    <div class="col-sm-5">
+
+        <div class="container mt-4 ">
+            <h3>Python</h3>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                    100%
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 pt-3 ">
+            <h3>Django</h3>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                    100%
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 pt-3">
+            <h3>Networking</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70"
+                    aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                    70%
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 pt-3">
+            <h3>Java</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="40"
+                    aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                    40%
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+{% endblock content %}
+

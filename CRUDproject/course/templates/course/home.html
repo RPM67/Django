@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'course/home.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+
+    <div class="container">
+        <div class="jumbotron text-center mt-4">
+            <h1 class="display-4">Welcome to Our Website</h1>
+            <p class="lead">This is a simple website that performs CRUD operations on a database for practice.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Explore Courses</h2>
+                        <p class="card-text">View the list of available courses.</p>
+                        <a href="{% url 'courses' %}" class="btn btn-primary">Show Courses</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Register Courses</h2>
+                        <p class="card-text">Register for new courses and contribute to the database.</p>
+                        <a href="{% url 'registration' %}" class="btn btn-success">Register Courses</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mt-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Database Portal</h2>
+                        <p class="card-text">Explore the database portal here. <br>
+                        <mark>id - 'rpm' <br>
+                        password - '12345678'</mark></p>
+                        <a href="/admin/course/course_list" class="btn btn-primary" target="_blank">Database Portal</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
