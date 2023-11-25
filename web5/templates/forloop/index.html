@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+    <style>
+        body 
+        {
+            background-color: blueviolet;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        {% for student in stu %}
+        <li><b>{{student}}</b></li>
+        {% endfor %}
+    </ul>
+    
+    <ul>
+        {% for student in stu reversed %}
+        <li><b>{{student}}</b></li>
+        {% endfor %}
+    </ul>
+
+
+    
+    {% for student in stu  %}
+    {{forloop.counter0}} {{student}} <br>  <!-- remove 0 from forloop.counter to start counting from 1 -->
+    {% endfor %}
+
+    <br>
+
+    {% for student in stu  %}
+    {{forloop.revcounter0}} {{student}} <br>  <!-- remove 0 from forlooprev.counter to end counting at 1 -->
+    {% endfor %}
+    
+    <br>
+
+    {% for students in stu %}
+    {{forloop.first}} {{student}} <br>  <!-- forloop.first returns true only when in 1st iteration of for loop -->
+    {% endfor %}
+    
+    <br>
+
+    {% for students in stu %}
+    {{forloop.last}} {{student}} <br>  <!-- forloop.last returns true only when in last iteration of for loop -->
+    {% endfor %}
+    
+    <br>
+
+    <!--dictionary data-->
+
+    {{persons}} <br><br>
+    {% for keys,values in persons.items %}
+    
+    {{keys}} <br>
+    {% for key,value in values.items %}
+    {{forloop.parentloop.counter}} {{key}} - {{value}} <br> <!-- 'forloop.parentloop.counter' will print the 
+                                                            current iteration of the parent loop in which the 
+                                                            current loop is running-->
+    {% endfor %}
+    <br>
+    {% endfor %}
+
+<!--since inside any dictonary also every key means every key from view function is a variable here automatically -->
+    {{persons.per1.name}} - {{persons.per1.age}} <br><!-- here only persons is send as key from views function
+                                                  but inside persons key, per1 is also a key and inside per1 key, 
+                                                  name is also a key. so all these keys become a variable here 
+                                                  automatically   -->
+    {{persons.per3.name}} <br>  
+    {{persons.per4.name}}  <br>                                     
+
+</body>
+</html>

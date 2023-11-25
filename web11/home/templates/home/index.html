@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    <ul style="font-size: 25px;">
+
+        <li><a href="/fees">fees1</a>  <!-- passing link directly here but have to edit everywhere when wanna change link if used multiple times in this page --></li>
+
+        <li><a href="{{fs}}">fees2</a> <!-- by taking link as variable will help in changing the link in future easily if used multiple times in this page--></li>
+
+    </ul>
+    <h2>using url patterns :- </h2>
+    <ul style="font-size: 25px;">
+
+        <li><a href="{% url 'feespage' %}">fees3</a>  </li>
+
+        {% url 'feespage' as fp %}
+        <li><a href="{{fp}}">fees4</a>  </li>
+
+    </ul>
+</body>
+</html>

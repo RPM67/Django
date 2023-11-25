@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{cn|upper}}</title>
+    <link rel="stylesheet" href="{% static 'courses/css/mcaStyle.css' %}">
+</head>
+<body>
+    <h1>{{cn}} course details here</h1>
+    <img src="{% static 'courses/images/mca.jpeg' %}" alt="mca-course-image">
+    <br>
+    
+    <button id="submitForm" value="Submit" onclick="disp()">Submit</button>
+
+    <script src="{% static 'courses/js/demo.js' %}"></script>
+    
+</body>
+</html>

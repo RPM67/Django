@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block cssfile %}
+    {{block.super}}  <!-- using this you can use below static file along with the parent template static file-->
+    <link rel="stylesheet" href="{% static 'fees/css/fee.css' %}">
+{% endblock cssfile %}
+
+{% block title %} Fees {% endblock title %}
+
+{% block content %} Your Fees Will Be Displayed Here {% endblock content %}
+
+{% block superblock %} child template file message along with '{{block.super}}' {% endblock superblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Title Here{% endblock title %}</title>
+    {% block cssfile %}
+    <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+    {% endblock cssfile %}
+</head>
+<body> 
+    <h1>{% block content %}
+    This is Default Message Shown from Parent Template file</h1>
+    <h3>visit this url to see child template file</h3>
+    <h2><a href="http://127.0.0.1:8000/fees/">/fees</a></h2>
+    {% endblock content %}
+    <h2>{% block superblock %} template file default message {% endblock superblock %}</h2>
+</body>
+</html>

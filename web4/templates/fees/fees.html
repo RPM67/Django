@@ -1,0 +1,39 @@
+<!DOCKTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>fees</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            body {
+                background-color : yellow;
+            }
+        </style>      
+    </head>
+    <body>
+        <h1>Hello {{nm}} {{lstnm}}.</h1>
+
+        <h1>Hello {{nm|upper}} {{lstnm|capfirst}}</h1>
+
+        <h1>{{nm}} word length : {{nm|length}} </h1>
+        <h1>{{lstnm}} word length : {{lstnm|length}}</h1> 
+
+
+        <h2>{{dt}}</h2>
+        <h2>{{dt|date:'D d M Y'}}</h2>
+        <h2>{{dt|time:'H:i'}}</h2>
+        <br>
+        <h2>{{dt|date:'SHORT_DATE_FORMAT'}}</h2>
+        <h2>{{dt|time:'TIME_FORMAT'}}</h2>
+
+        <br>
+        <h2>{{fee}}</h2>
+        <h2>{{fee|floatformat}}</h2>
+        <h2>{{fee|floatformat:"0"}}</h2>
+        <h2>{{fee|floatformat:"3"}}</h2>
+
+    </body>
+</html>

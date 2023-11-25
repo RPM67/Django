@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+    
+    
+    <form action="">
+
+        {% for feild in form %}
+        {{feild.label_tag}}
+        <br>
+        {{feild}}
+        <br>
+        {% endfor %}
+
+        <!--by using hidden feilds, only input tag will be hidden in our page 
+            not the label of that hidden input tag which is not good.so  by using  
+            'forms.visible_fields' here we will have access of only visible form
+             feilds and hidden feilds label will get excluded which was getting 
+             printed above. if all feilds are visible then don't need to do this-->
+        {% for feild in form.visible_fields %}
+        {{feild.label_tag}}
+        <br>
+        {{feild}}
+        <br>
+        {% endfor %}
+        
+        <hr>
+            <!-- using loop for hidden feilds here -->
+        {% for hidden in form.hidden_fields %}
+        {{hidden.label_tag}}
+        <br>
+        {{hidden}} <!--the hidden input tags cannot be printed on web page b/c as the name mention they are 
+            hidden. by doing this we are just rendering the hidden tag code on our page. however their labels
+             can be printed so here only hidden tag labels are printed on web page not the hidden input tag.-->
+        <br>
+        {% endfor %}
+        <input type="submit" value="submit">
+    </form>
+    
+    
+</body>
+
+</html>

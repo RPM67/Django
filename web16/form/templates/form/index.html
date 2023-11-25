@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+    
+    <h2>visit <a href="{% url 'autoid' %}">/autoid</a> to see auto_id, label_suffix, and initial_values example</h2>
+
+    <form action="">
+        {{form}}
+        <input type="submit" value="submit">
+    </form>
+    <hr>
+    <form action="">
+        {{form.as_table}} <!-- above and this rendering option is same having same output-->
+        <input type="submit" value="submit">
+    </form>
+
+    <hr>
+
+    <form action="">
+        {{form.as_p}}
+        <input type="submit" value="submit">
+    </form>
+
+    <hr>
+
+    <form action="">
+        {{form.as_ul}}
+        <input type="submit" value="submit">
+    </form>
+
+    <hr>
+
+    <form action="">
+        {{form.name}}
+        {{form.email}}
+        {{form.course}}
+        <input type="submit" value="submit">
+    </form>
+
+    
+</body>
+
+</html>

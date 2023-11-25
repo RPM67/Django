@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        body {
+            background-color : red;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>{{nm}}</h1>
+    
+    {% if nm %}
+    <h1>{{nm}}</h1>
+    {% endif %}
+
+    {% if nm and du %}
+    <h1>{{nm}}+{{du}}</h1>
+    {% endif %}
+
+    {% if nm == "Django" %}
+    <h1>condition satisfied for {{nm}}</h1>
+    {% endif %}
+
+    {% if nm|length > 5 %}
+    <h1>length of {{nm}} word is greater than 5</h1>
+    {% endif %}
+
+
+
+    {% if nm == 'tjango' %}
+    <h1>no course available</h1>
+    {% else %}
+    <h1>{{nm}} course available</h1>
+    {% endif %}
+
+
+
+    {% if nm == 'tjango' %}
+    <h1>no course available</h1>
+    {% elif nm == 'mongodb' %}
+    <h1>course coming soon </h1>
+    {% else %}
+    <h1>{{nm}} course available</h1>
+    {% endif %}
+
+</body>
+</html>
